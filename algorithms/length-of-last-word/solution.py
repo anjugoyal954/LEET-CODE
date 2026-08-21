@@ -1,7 +1,5 @@
 class Solution:
-    def strStr(self, haystack: str, needle: str) -> int:
-        if needle in haystack:
-            return haystack.index(needle)
-        else:
-            return -1
+    def lengthOfLastWord(self, s: str) -> int:
+        s = s.strip().split()
+        return len(s[-1])
         
