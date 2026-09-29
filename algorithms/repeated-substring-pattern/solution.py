@@ -1,19 +1,15 @@
 class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        low = 0
-        high = len(nums) - 1
-        while low <= high :
-            mid = (low+high) // 2
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        res = []
+        n = len(s)
+        for i in range(1, n) :
+            if n % i == 0:
+                res.append(i)
 
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] < target :
-                low = mid + 1
-            else:
-                high = mid - 1 
+        for x in res:
+            y = n // x
+            if s[:x] * y == s:
+                return True
+        return False
 
-        return low
-        
-
-    
         
