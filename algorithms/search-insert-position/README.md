@@ -10,7 +10,7 @@ https://leetcode.com/problems/search-insert-position/
 
 ## Solution
 
-Automatically synchronized from LeetCode on August 21, 2026.
+Automatically synchronized from LeetCode on September 29, 2026.
 
 ## Complexity
 
