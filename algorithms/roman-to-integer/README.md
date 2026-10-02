@@ -10,7 +10,7 @@ https://leetcode.com/problems/roman-to-integer/
 
 ## Solution
 
-Automatically synchronized from LeetCode on August 21, 2026.
+Automatically synchronized from LeetCode on October 2, 2026.
 
 ## Complexity
 
