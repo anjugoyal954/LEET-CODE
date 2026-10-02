@@ -1,22 +1,16 @@
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        left = 0 
-        right = len(s) - 1 
- 
-        while left < right: 
- 
-            if not s[left].isalnum():
-               left += 1
- 
-            elif not s[right].isalnum(): 
-               right -=1 
- 
-            else: 
-                if  s[left].lower() != s[right].lower():
-                   return False
-                else: 
-                    left += 1
-                    right -=1 
-        return True
-  
+    def convertToTitle(self, columnNumber: int) -> str:
+        res = ""
+        while columnNumber > 0:
+            remainder = columnNumber % 26
+            quotient = columnNumber // 26
+
+            if remainder == 0 :
+                res += "Z"
+                quotient -= 1
+            else:
+                res += chr(65 + remainder - 1)
+
+            columnNumber = quotient
+        return res[::-1]
         
