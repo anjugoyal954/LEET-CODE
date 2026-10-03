@@ -1,10 +1,12 @@
 class Solution:
-    def titleToNumber(self, columnTitle: str) -> int:
-        columnTitle = columnTitle[::-1]
-        output = 0
-
-        for index, i in enumerate(columnTitle):
-             output += (ord(i) - ord("A") + 1) * 26 ** index
-
-        return output
-        
+    def containsDuplicate(self, nums: list[int]) -> bool:
+        freq ={}
+        for i in nums:
+            if i in freq:
+                freq[i] += 1
+            else:
+                freq[i] = 1
+        for x in freq:
+            if freq[x] > 1:
+                return True
+        return False
