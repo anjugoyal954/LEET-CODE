@@ -1,16 +1,12 @@
 class Solution:
-    def convertToTitle(self, columnNumber: int) -> str:
-        res = ""
-        while columnNumber > 0:
-            remainder = columnNumber % 26
-            quotient = columnNumber // 26
-
-            if remainder == 0 :
-                res += "Z"
-                quotient -= 1
+    def majorityElement(self, nums: list[int]) -> int:
+        n = len(nums)
+        freq = {}
+        for i in nums:
+            if i in freq:
+                freq[i] += 1
             else:
-                res += chr(65 + remainder - 1)
-
-            columnNumber = quotient
-        return res[::-1]
-        
+                freq[i] = 1
+        for x in freq:
+            if freq[x] > n/2:
+                return x
